@@ -50,6 +50,33 @@
       "$description": "Gradient stops of the glass surface recipe (145deg, from → to) + 12px backdrop blur + border/subtle.",
       "from": { "$value": "#141821CC" },
       "to": { "$value": "#0A0C12E6" }
+    },
+    "gradient": {
+      "$description": "Brand gradients from the palette sheet's neutral/accent gradient rows. In Figma: linear gradient fills at the given angle.",
+      "neutral": {
+        "$type": "orba-gradient",
+        "$description": "The night sweep — deep canvas rising to ice. Ambient backgrounds, quiet data fills.",
+        "$value": {
+          "angle": 135,
+          "stops": ["{colour.night.900}", "{colour.night.500}", "{colour.night.200}"]
+        }
+      },
+      "accent": {
+        "$type": "orba-gradient",
+        "$description": "The warm sweep — coral into deep rose. Hero moments, active progress, the one warm signal at full strength.",
+        "$value": {
+          "angle": 135,
+          "stops": ["{colour.coral.500}", "{colour.coral.700}"]
+        }
+      },
+      "scrim": {
+        "$type": "orba-gradient",
+        "$description": "Media scrim — void rising over imagery so text stays readable (from the reference cards).",
+        "$value": {
+          "angle": 0,
+          "stops": ["#0A0C12E6", "#0A0C1200"]
+        }
+      }
     }
   },
   "semantic": {

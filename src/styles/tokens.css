@@ -106,6 +106,9 @@
 }
 
 :root {
+  --gradient-neutral: linear-gradient(135deg, #10171E, #4C6B73, #A7C6D1);
+  --gradient-accent: linear-gradient(135deg, #FF8D9B, #B45B67);
+  --gradient-scrim: linear-gradient(0deg, #0A0C12E6, #0A0C1200);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;

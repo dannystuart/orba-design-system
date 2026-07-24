@@ -83,6 +83,21 @@ describe("buildCss", () => {
     expect(root["--duration-base"]).toBe("300ms");
   });
 
+  it("serialises gradients with alias stops under :root", () => {
+    const { root: r } = buildCss({
+      colour: {
+        coral: { $type: "color", "500": { $value: "#FF8D9B" }, "700": { $value: "#B45B67" } },
+        gradient: {
+          accent: {
+            $type: "orba-gradient",
+            $value: { angle: 135, stops: ["{colour.coral.500}", "{colour.coral.700}"] },
+          },
+        },
+      },
+    });
+    expect(r["--gradient-accent"]).toBe("linear-gradient(135deg, #FF8D9B, #B45B67)");
+  });
+
   it("throws loudly on a missing alias target", () => {
     expect(() =>
       buildCss({

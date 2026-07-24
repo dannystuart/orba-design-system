@@ -16,10 +16,10 @@ export const navGroups: NavGroup[] = [
   {
     title: "Components",
     items: [
-      { title: "Buttons", href: "/components/buttons", soon: true },
+      { title: "Buttons", href: "/components/buttons" },
       { title: "Inputs", href: "/components/inputs", soon: true },
       { title: "Cards", href: "/components/cards", soon: true },
-      { title: "Icons", href: "/components/icons", soon: true },
+      { title: "Icons", href: "/components/icons" },
     ],
   },
 ];
