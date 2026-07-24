@@ -1,0 +1,146 @@
+{
+  "colour": {
+    "$description": "ORBA primitive colours. Anchors taken from design-refs/images/colour.png; intermediate ramp steps interpolated. Dark-only theme.",
+    "night": {
+      "$type": "color",
+      "$description": "The cool blue-grey foundation ramp. 950 is the page canvas.",
+      "950": { "$value": "#0B0F14" },
+      "900": { "$value": "#10171E" },
+      "850": { "$value": "#141E24" },
+      "800": { "$value": "#1A2A33" },
+      "700": { "$value": "#223640" },
+      "600": { "$value": "#2E4A55" },
+      "500": { "$value": "#4C6B73" },
+      "400": { "$value": "#6B8792" },
+      "300": { "$value": "#8CA7B1" },
+      "200": { "$value": "#A7C6D1" },
+      "100": { "$value": "#C6DCE4" },
+      "50": { "$value": "#E4F0F4" }
+    },
+    "coral": {
+      "$type": "color",
+      "$description": "The one warm signal. 500 is the canonical ORBA accent; 700 is the deep rose used for pressed states.",
+      "300": { "$value": "#FFB3BC" },
+      "400": { "$value": "#FF9FAB" },
+      "500": { "$value": "#FF8D9B" },
+      "600": { "$value": "#DC7484" },
+      "700": { "$value": "#B45B67" }
+    },
+    "danger": {
+      "$type": "color",
+      "$description": "Error/danger red — deliberately distinct from the coral accent.",
+      "400": { "$value": "#F87171" }
+    },
+    "white": {
+      "$type": "color",
+      "$description": "ORBA off-white. Never pure #FFFFFF for text.",
+      "$value": "#F7F7F5"
+    },
+    "alpha": {
+      "$type": "color",
+      "$description": "White alphas for hairline borders and glass fills over the void.",
+      "white-3": { "$value": "#FFFFFF08" },
+      "white-5": { "$value": "#FFFFFF0D" },
+      "white-8": { "$value": "#FFFFFF14" },
+      "white-10": { "$value": "#FFFFFF1A" },
+      "white-12": { "$value": "#FFFFFF1F" }
+    },
+    "glass": {
+      "$type": "color",
+      "$description": "Gradient stops of the glass surface recipe (145deg, from → to) + 12px backdrop blur + border/subtle.",
+      "from": { "$value": "#141821CC" },
+      "to": { "$value": "#0A0C12E6" }
+    }
+  },
+  "semantic": {
+    "$description": "Role tokens — components only ever reference these. Light-ready: a future light theme re-points these aliases.",
+    "bg": {
+      "$type": "color",
+      "base": {
+        "$value": "{colour.night.950}",
+        "$extensions": { "orba": { "cssName": "bg" } }
+      }
+    },
+    "surface": {
+      "$type": "color",
+      "sunken": {
+        "$value": "{colour.alpha.white-3}",
+        "$description": "Inset wells and quiet fills on top of glass.",
+        "$extensions": { "orba": { "cssName": "surface-sunken" } }
+      }
+    },
+    "text": {
+      "$type": "color",
+      "primary": {
+        "$value": "{colour.white}",
+        "$extensions": { "orba": { "cssName": "fg" } }
+      },
+      "secondary": {
+        "$value": "{colour.night.200}",
+        "$extensions": { "orba": { "cssName": "fg-secondary" } }
+      },
+      "muted": {
+        "$value": "{colour.night.400}",
+        "$extensions": { "orba": { "cssName": "fg-muted" } }
+      },
+      "disabled": {
+        "$value": "{colour.night.600}",
+        "$extensions": { "orba": { "cssName": "fg-disabled" } }
+      },
+      "on-accent": {
+        "$value": "{colour.night.950}",
+        "$description": "Text/icons sitting on a coral fill.",
+        "$extensions": { "orba": { "cssName": "fg-on-accent" } }
+      }
+    },
+    "border": {
+      "$type": "color",
+      "subtle": {
+        "$value": "{colour.alpha.white-5}",
+        "$extensions": { "orba": { "cssName": "border-subtle" } }
+      },
+      "default": {
+        "$value": "{colour.alpha.white-10}",
+        "$extensions": { "orba": { "cssName": "border-default" } }
+      },
+      "strong": {
+        "$value": "{colour.alpha.white-12}",
+        "$extensions": { "orba": { "cssName": "border-strong" } }
+      }
+    },
+    "accent": {
+      "$type": "color",
+      "default": {
+        "$value": "{colour.coral.500}",
+        "$extensions": { "orba": { "cssName": "accent" } }
+      },
+      "hover": {
+        "$value": "{colour.coral.400}",
+        "$extensions": { "orba": { "cssName": "accent-hover" } }
+      },
+      "pressed": {
+        "$value": "{colour.coral.700}",
+        "$extensions": { "orba": { "cssName": "accent-pressed" } }
+      },
+      "subtle": {
+        "$value": "#FF8D9B1A",
+        "$description": "10% coral fill for chips, icon wells, selected states.",
+        "$extensions": { "orba": { "cssName": "accent-subtle" } }
+      }
+    },
+    "status": {
+      "$type": "color",
+      "error": {
+        "$value": "{colour.danger.400}",
+        "$extensions": { "orba": { "cssName": "danger" } }
+      }
+    },
+    "focus": {
+      "$type": "color",
+      "ring": {
+        "$value": "{colour.coral.300}",
+        "$extensions": { "orba": { "cssName": "ring" } }
+      }
+    }
+  }
+}

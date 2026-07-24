@@ -1,0 +1,70 @@
+{
+  "font": {
+    "$description": "ORBA typography. Single family: Satoshi (Fontshare, self-hosted variable font 300–900).",
+    "family": {
+      "sans": {
+        "$type": "fontFamily",
+        "$value": ["Satoshi", "ui-sans-serif", "system-ui", "sans-serif"]
+      }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "light": { "$value": 300 },
+      "regular": { "$value": 400 },
+      "medium": { "$value": 500 },
+      "bold": { "$value": 700 },
+      "black": { "$value": 900 }
+    }
+  },
+  "type": {
+    "$description": "Fluid type scale. Sizes interpolate between minPx (390px viewport) and maxPx (1280px viewport) via clamp(). orba-fluid-text is an ORBA extension type; the Figma session should create one text style per token using maxPx (desktop) and minPx (mobile variant).",
+    "display-2xl": {
+      "$type": "orba-fluid-text",
+      "$description": "Timer numerals and hero counters.",
+      "$value": { "minPx": 56, "maxPx": 96, "weight": 300, "trackingEm": -0.05, "leading": 1.05 }
+    },
+    "display-xl": {
+      "$type": "orba-fluid-text",
+      "$description": "Hero headlines.",
+      "$value": { "minPx": 44, "maxPx": 72, "weight": 300, "trackingEm": -0.04, "leading": 1.05 }
+    },
+    "heading-1": {
+      "$type": "orba-fluid-text",
+      "$value": { "minPx": 36, "maxPx": 48, "weight": 500, "trackingEm": -0.025, "leading": 1.1 }
+    },
+    "heading-2": {
+      "$type": "orba-fluid-text",
+      "$value": { "minPx": 28, "maxPx": 36, "weight": 500, "trackingEm": -0.02, "leading": 1.15 }
+    },
+    "heading-3": {
+      "$type": "orba-fluid-text",
+      "$value": { "minPx": 22, "maxPx": 26, "weight": 500, "trackingEm": -0.01, "leading": 1.25 }
+    },
+    "heading-4": {
+      "$type": "orba-fluid-text",
+      "$value": { "minPx": 18, "maxPx": 20, "weight": 500, "trackingEm": 0, "leading": 1.35 }
+    },
+    "body-lg": {
+      "$type": "orba-fluid-text",
+      "$description": "Lead paragraphs; pairs with weight Light for quotes.",
+      "$value": { "minPx": 17, "maxPx": 18, "weight": 400, "trackingEm": 0, "leading": 1.65 }
+    },
+    "body": {
+      "$type": "orba-fluid-text",
+      "$value": { "minPx": 16, "maxPx": 16, "weight": 400, "trackingEm": 0, "leading": 1.6 }
+    },
+    "body-sm": {
+      "$type": "orba-fluid-text",
+      "$value": { "minPx": 14, "maxPx": 14, "weight": 400, "trackingEm": 0, "leading": 1.5 }
+    },
+    "caption": {
+      "$type": "orba-fluid-text",
+      "$value": { "minPx": 12, "maxPx": 12, "weight": 400, "trackingEm": 0.01, "leading": 1.45 }
+    },
+    "overline": {
+      "$type": "orba-fluid-text",
+      "$description": "The signature letterspaced uppercase micro-label (FOCUS TIMER, AMBIENT CONTEXT). Always uppercase.",
+      "$value": { "minPx": 10, "maxPx": 11, "weight": 500, "trackingEm": 0.25, "leading": 1.4, "uppercase": true }
+    }
+  }
+}

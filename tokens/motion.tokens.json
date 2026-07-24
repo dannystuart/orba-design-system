@@ -1,0 +1,22 @@
+{
+  "duration": {
+    "$type": "duration",
+    "$description": "Motion durations. fast = colour/opacity flips, base = most transitions, slow = spatial moves (with spring), drift = large media, ambient-* = looping decoration.",
+    "fast": { "$value": "150ms" },
+    "base": { "$value": "300ms" },
+    "slow": { "$value": "400ms" },
+    "drift": { "$value": "700ms" },
+    "ambient-wave": { "$value": "1200ms" },
+    "ambient-shimmer": { "$value": "2000ms" },
+    "ambient-pulse": { "$value": "2500ms" },
+    "breathe": { "$value": "4000ms" },
+    "ambient-spin": { "$value": "12000ms" }
+  },
+  "easing": {
+    "$type": "cubicBezier",
+    "$description": "standard = utility moves; spring = the signature ORBA bounce (hover-lift, entrances); linear = spins and shimmers only.",
+    "standard": { "$value": [0.4, 0, 0.2, 1] },
+    "spring": { "$value": [0.34, 1.56, 0.64, 1] },
+    "linear": { "$value": [0, 0, 1, 1] }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "shadow": {
+    "$type": "shadow",
+    "$description": "Elevation the ORBA way: depth comes from darkness + hairline light borders, never grey drop-shadows.",
+    "raised": {
+      "$value": { "color": "#00000059", "offsetX": "0px", "offsetY": "8px", "blur": "24px", "spread": "0px" }
+    },
+    "floating": {
+      "$description": "Hover-lift target elevation.",
+      "$value": { "color": "#00000080", "offsetX": "0px", "offsetY": "24px", "blur": "48px", "spread": "0px" }
+    }
+  },
+  "glow": {
+    "$type": "shadow",
+    "$description": "The coral halo family. Soft for resting accents, strong for live/hovered elements.",
+    "accent-soft": {
+      "$value": { "color": "#FF8D9B33", "offsetX": "0px", "offsetY": "0px", "blur": "20px", "spread": "0px" }
+    },
+    "accent-strong": {
+      "$value": { "color": "#FF8D9B66", "offsetX": "0px", "offsetY": "0px", "blur": "30px", "spread": "0px" }
+    },
+    "knob": {
+      "$description": "White glow on slider knobs and live dots.",
+      "$value": { "color": "#FFFFFF99", "offsetX": "0px", "offsetY": "0px", "blur": "15px", "spread": "0px" }
+    }
+  }
+}
