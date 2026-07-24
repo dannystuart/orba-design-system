@@ -11,6 +11,8 @@
   --animate-shimmer: shimmer var(--duration-ambient-shimmer) linear infinite;
   --animate-breathe: breathe var(--duration-breathe) var(--ease-standard) infinite;
   --animate-fade-up: fade-up var(--duration-slow) var(--ease-standard) both;
+  --animate-fade-in: fade-in var(--duration-base) var(--ease-standard) both;
+  --animate-slide-in: slide-in var(--duration-slow) var(--ease-spring) both;
 }
 
 /* ---- Base ---- */
@@ -105,6 +107,24 @@ body {
   50% {
     transform: scale(1.08);
     opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 

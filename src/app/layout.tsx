@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Ambient } from "@/components/site/Ambient";
+import { SiteChrome } from "@/components/site/SiteChrome";
 import "@/styles/globals.css";
 
 const satoshi = localFont({
@@ -29,7 +31,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={satoshi.variable}>
-      <body>{children}</body>
+      <body>
+        <Ambient />
+        <SiteChrome>{children}</SiteChrome>
+      </body>
     </html>
   );
 }
