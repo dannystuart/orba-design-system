@@ -17,7 +17,7 @@ export const navGroups: NavGroup[] = [
     title: "Components",
     items: [
       { title: "Buttons", href: "/components/buttons" },
-      { title: "Inputs", href: "/components/inputs", soon: true },
+      { title: "Inputs", href: "/components/inputs" },
       { title: "Cards", href: "/components/cards", soon: true },
       { title: "Icons", href: "/components/icons" },
     ],
