@@ -19,13 +19,16 @@ function Nebula() {
   return (
     <div aria-hidden className="absolute inset-0 overflow-hidden rounded-lg">
       <div
-        className="absolute -top-6 -left-4 size-32 rounded-full opacity-70"
-        style={{ background: "radial-gradient(circle, var(--color-coral-500), transparent 70%)" }}
+        className="absolute -top-4 left-2 size-36 rounded-full opacity-90"
+        style={{ background: "radial-gradient(circle, var(--color-coral-500), transparent 68%)" }}
       />
       <div
-        className="absolute -right-6 -bottom-8 size-36 rounded-full opacity-50"
-        style={{ background: "radial-gradient(circle, var(--color-night-200), transparent 70%)" }}
+        className="absolute -right-2 -bottom-6 size-32 rounded-full opacity-70"
+        style={{ background: "radial-gradient(circle, var(--color-night-200), transparent 68%)" }}
       />
+      <div className="absolute top-6 right-10 size-1 rounded-full bg-white/80" />
+      <div className="absolute top-16 left-8 size-0.5 rounded-full bg-white/60" />
+      <div className="absolute bottom-8 left-16 size-1 rounded-full bg-white/50" />
     </div>
   );
 }
@@ -74,10 +77,10 @@ export default function ShapePage() {
             { step: "2 · + Blur 12px", cls: "backdrop-blur-[12px]", style: { background: "linear-gradient(145deg, var(--color-glass-from), var(--color-glass-to))" } },
             { step: "3 · + Hairline", cls: "glass", style: {} },
           ].map((layer) => (
-            <figure key={layer.step} className="relative">
+            <figure key={layer.step} className="relative h-44">
               <Nebula />
               <div
-                className={`relative flex h-36 items-end rounded-lg p-4 ${layer.cls}`}
+                className={`absolute inset-5 flex items-end rounded-lg p-4 ${layer.cls}`}
                 style={layer.style}
               >
                 <figcaption className="overline-label text-fg-secondary">{layer.step}</figcaption>
