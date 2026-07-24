@@ -43,6 +43,14 @@ A live, code-first design system website for **ORBA** — a calm, night-first de
 
 ---
 
+## Figma mirroring kickoff prompt (paste into a new session)
+
+> Mirror the ORBA design system into Figma.
+> Project: `~/CodeProjects/image-to-design-system` (github.com/dannystuart/orba-design-system, live at https://orba-design-system-rho.vercel.app).
+> Read first, in order: (1) `figma-handoff/manifest.json` — token collections + 12 component sets with variant properties; (2) `docs/HANDOFF.md` — locked decisions; (3) `design-refs/images/` + the live site — the visual truth.
+> Then, using the Figma tools (and the figma-generate-library skill): check the Figma connection works before anything else and tell me immediately if it doesn't; create a Figma file "ORBA Design System" with pages Cover / Foundations / Components; build variable collections 1:1 from `tokens/*.tokens.json` per the manifest's guidance (fluid type becomes paired desktop/mobile text styles from maxPx/minPx); build the 12 component sets matching the frozen state visuals documented on the site; finish with the three Deep Focus cards composed from the new components.
+> Gate with me: once after variables + text styles, then after each component group — screenshot each stage in Figma for approval before continuing. Don't guess any value; everything is in the manifest. I'm a designer — keep explanations plain and outcome-first.
+
 ## Fresh-session starter prompt (paste this)
 
 > Continue the ORBA design system build in `~/CodeProjects/image-to-design-system`.
