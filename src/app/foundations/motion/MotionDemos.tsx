@@ -1,8 +1,11 @@
 "use client";
 
 import { ArrowClockwise } from "@phosphor-icons/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { WaveEqualizer } from "@/components/orba/WaveEqualizer";
 import { durations, easings } from "@/lib/tokens";
+
+const REPLAYABLE = new Set(["fade-up", "stagger", "count-up"]);
 
 /** Click a duration pill → the dot crosses the track at that speed. */
 export function DurationDemo() {
@@ -94,13 +97,60 @@ export function EasingDemo() {
 }
 
 const interactions = [
-  { name: "hover-lift", note: "Cards rise 8px on the spring easing. Hover the card." },
-  { name: "glow-pulse", note: "Live dots breathe glow. 2.5s loop." },
-  { name: "wave-dance", note: "The equalizer. 1.2s loop, 50ms stagger." },
-  { name: "shimmer", note: "Active progress shimmers. 2s linear loop." },
-  { name: "slow-spin", note: "Orbits rotate over 12s, linear." },
-  { name: "breathe", note: "The meditation rhythm. 4s loop." },
-  { name: "fade-up", note: "Entrances rise 12px and fade in. Replay ↻" },
+  {
+    name: "hover-lift",
+    note: "Hover the card.",
+    tokens: "duration/slow · ease/spring · shadow/floating",
+    use: "Any interactive card or tile. Never on static content.",
+  },
+  {
+    name: "glow-pulse",
+    note: "Live dots breathe glow.",
+    tokens: "duration/ambient-pulse · glow/accent-soft→strong",
+    use: "The one live element per view: recording dot, active session.",
+  },
+  {
+    name: "wave-dance",
+    note: "The equalizer.",
+    tokens: "duration/ambient-wave · 50ms stagger",
+    use: "Sound that is currently playing — never as decoration.",
+  },
+  {
+    name: "shimmer",
+    note: "Active progress shimmers.",
+    tokens: "duration/ambient-shimmer · linear",
+    use: "Progress currently being earned; static bars stay still.",
+  },
+  {
+    name: "slow-spin",
+    note: "Orbits rotate, linear.",
+    tokens: "duration/ambient-spin · linear",
+    use: "Timer rings and orbital decoration. One per view.",
+  },
+  {
+    name: "breathe",
+    note: "The meditation rhythm.",
+    tokens: "duration/breathe · ease/standard",
+    use: "Breathing guides and idle companion orbs.",
+  },
+  {
+    name: "fade-up",
+    note: "Entrances rise 12px. Replay ↻",
+    tokens: "duration/slow · ease/standard",
+    use: "Content arriving on screen. Keyframes, never transitions.",
+  },
+  {
+    name: "stagger",
+    note: "Siblings arrive 60ms apart. Replay ↻",
+    tokens: "fade-up × n · 60ms steps",
+    use: "Lists and grids entering together — max 6 staggered items.",
+  },
+  {
+    name: "count-up",
+    note: "Numbers land softly. Replay ↻",
+    tokens: "duration/drift · ease/standard",
+    use: "Stats revealing their value. Respects reduced motion (jumps).",
+  },
 ] as const;
 
 function InteractionPreview({ name, replayKey }: { name: string; replayKey: number }) {
@@ -115,20 +165,11 @@ function InteractionPreview({ name, replayKey }: { name: string; replayKey: numb
       return <span className="animate-glow-pulse size-3 rounded-full bg-accent" />;
     case "wave-dance":
       return (
-        <div className="flex h-16 items-end gap-1">
-          {[40, 65, 90, 75, 100, 85, 60, 45, 70, 55, 35, 25].map((h, i) => (
-            <span
-              key={i}
-              className="animate-wave-dance w-1 origin-bottom rounded-full"
-              style={{
-                height: `${h}%`,
-                animationDelay: `${i * 50}ms`,
-                background:
-                  "linear-gradient(to top, color-mix(in srgb, var(--color-accent) 25%, transparent), var(--color-accent))",
-              }}
-            />
-          ))}
-        </div>
+        <WaveEqualizer
+          heights={[40, 65, 90, 75, 100, 85, 60, 45, 70, 55, 35, 25]}
+          barWidth={4}
+          className="h-16 w-32"
+        />
       );
     case "shimmer":
       return (
@@ -166,9 +207,48 @@ function InteractionPreview({ name, replayKey }: { name: string; replayKey: numb
           <p className="text-caption text-fg-secondary">entrance</p>
         </div>
       );
+    case "stagger":
+      return (
+        <div key={replayKey} className="flex w-full max-w-44 flex-col gap-2">
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className="animate-fade-up h-8 rounded-md bg-surface-sunken"
+              style={{ animationDelay: `${i * 60}ms` }}
+            />
+          ))}
+        </div>
+      );
+    case "count-up":
+      return <CountUp key={replayKey} target={78} />;
     default:
       return null;
   }
+}
+
+function CountUp({ target }: { target: number }) {
+  const [value, setValue] = useState(0);
+  useEffect(() => {
+    // Reduced motion: land on the value in a single frame.
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const duration = reduce ? 0 : 700; // duration/drift
+    const startTime = performance.now();
+    let frame: number;
+    const tick = (now: number) => {
+      const t = duration === 0 ? 1 : Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      setValue(Math.round(eased * target));
+      if (t < 1) frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [target]);
+  return (
+    <p className="text-display-2xl text-fg" style={{ fontSize: "3rem" }}>
+      {value}
+      <span className="text-heading-3 text-fg-muted">%</span>
+    </p>
+  );
 }
 
 export function InteractionGrid() {
@@ -179,7 +259,7 @@ export function InteractionGrid() {
         <figure key={ix.name} className="glass flex flex-col rounded-lg p-5">
           <div className="mb-4 flex items-center justify-between">
             <figcaption className="overline-label text-accent">{ix.name}</figcaption>
-            {ix.name === "fade-up" && (
+            {REPLAYABLE.has(ix.name) && (
               <button
                 type="button"
                 aria-label={`Replay ${ix.name}`}
@@ -193,7 +273,11 @@ export function InteractionGrid() {
           <div className="flex min-h-28 flex-1 items-center justify-center py-2">
             <InteractionPreview name={ix.name} replayKey={keys[ix.name] ?? 0} />
           </div>
-          <p className="mt-4 text-caption text-fg-muted">{ix.note}</p>
+          <p className="mt-4 text-caption text-fg-secondary">{ix.note}</p>
+          <p className="mt-2 font-mono text-[10px] text-fg-muted">{ix.tokens}</p>
+          <p className="mt-2 border-t border-border-subtle pt-2 text-caption text-fg-muted">
+            {ix.use}
+          </p>
         </figure>
       ))}
     </div>
