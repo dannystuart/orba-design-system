@@ -19,12 +19,16 @@ A live, code-first design system website for **ORBA** — a calm, night-first de
 - Tokens: DTCG JSON in `tokens/*.tokens.json` is the single source of truth → `scripts/build-tokens.ts` generates `src/styles/tokens.css` (Tailwind v4 `@theme`). Never hand-edit `tokens.css`; never hard-code values in components. Tests: `pnpm test`.
 - Components use **semantic tokens only** (`--color-fg`, `--color-accent`…), never primitives.
 
-## State
+## State — ALL SIX CHUNKS BUILT (v1.0.0)
 
-- **Chunk 1 (Foundations) — DONE, approved by Danny at the browser gate.** Site shell + overview + philosophy/colour/typography/spacing/shape/motion pages, all verified (typecheck, lint, build, 14 screenshots in `docs/review/chunk-1/`).
-- **Chunk 2 (Buttons + Icons) — in progress**, folding in Danny's one gate note: **add gradient swatches** (the palette sheet's neutral + accent gradient rows were missed — add as tokens + Colour page section).
-- Remaining: Chunk 3 Inputs · Chunk 4 Cards · Chunk 5 Motion library · Chunk 6 Audit + Figma-export manifest.
-- Danny said "carry on" while away: build continues chunk-by-chunk with self-verification; each chunk leaves screenshots in `docs/review/chunk-N/` for async review.
+- **Chunk 1 Foundations** — approved by Danny at the browser gate. Review pack: `docs/review/chunk-1/`.
+- **Chunk 2 Buttons + Icons + gradient tokens** (Danny's gate note folded in) — `docs/review/chunk-2/`.
+- **Chunk 3 Inputs** — all controls with headless interaction checks (`scripts/verify-inputs.ts`, 7 passing) — `docs/review/chunk-3/`.
+- **Chunk 4 Cards** — incl. the three Deep Focus reference cards rebuilt on-system — `docs/review/chunk-4/`.
+- **Chunk 5 Motion library** — per-interaction specs, stagger + count-up, shared `WaveEqualizer`.
+- **Chunk 6** — final capture sweep (`docs/review/final/`, 22 shots) + `figma-handoff/manifest.json` (12 component sets, 130 variables).
+- Chunks 2–6 were built while Danny was away ("carry on") and are merged but **not yet human-reviewed** — his async review of `docs/review/final/` may produce revision notes.
+- Known follow-ups for a next session: deeper keyboard/screen-reader audit beyond the scripted checks; real device testing; then the Figma mirroring session (read `figma-handoff/manifest.json` first; authorise the figma connector).
 
 ## Workflow rules
 

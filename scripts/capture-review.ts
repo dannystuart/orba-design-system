@@ -18,6 +18,7 @@ const pages: Array<[name: string, path: string]> = [
   ["motion", "/foundations/motion"],
   ["buttons", "/components/buttons"],
   ["inputs", "/components/inputs"],
+  ["cards", "/components/cards"],
   ["icons", "/components/icons"],
 ];
 
