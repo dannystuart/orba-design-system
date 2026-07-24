@@ -9,8 +9,9 @@
     "lint": "eslint src scripts",
     "typecheck": "tsc --noEmit",
     "tokens": "tsx scripts/build-tokens.ts",
-    "predev": "pnpm tokens",
-    "prebuild": "pnpm tokens",
+    "fonts": "tsx scripts/fetch-fonts.ts",
+    "predev": "pnpm fonts && pnpm tokens",
+    "prebuild": "pnpm fonts && pnpm tokens",
     "test": "vitest run"
   },
   "pnpm": {
@@ -28,9 +29,11 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
+    "@types/adm-zip": "^0.5.8",
     "@types/node": "^26.1.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
+    "adm-zip": "^0.6.0",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.2.11",
     "playwright": "^1.61.1",

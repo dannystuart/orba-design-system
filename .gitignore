@@ -6,6 +6,9 @@
 /out/
 next-env.d.ts
 
+# fonts — fetched from Fontshare at build time (FFL forbids redistribution)
+/src/fonts/*.woff2
+
 # misc
 .DS_Store
 *.pem
