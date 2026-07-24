@@ -82,7 +82,21 @@ function resolveValue(tree: Tree, node: TokenNode, depth = 0): unknown {
   if (typeof v === "string" && v.startsWith("{") && v.endsWith("}")) {
     return resolveValue(tree, getAtPath(tree, v.slice(1, -1)), depth + 1);
   }
-  return v;
+  return deepResolve(tree, v, depth);
+}
+
+/** Resolve {alias} strings nested inside composite $values (arrays/objects). */
+function deepResolve(tree: Tree, value: unknown, depth: number): unknown {
+  if (typeof value === "string" && value.startsWith("{") && value.endsWith("}")) {
+    return resolveValue(tree, getAtPath(tree, value.slice(1, -1)), depth + 1);
+  }
+  if (Array.isArray(value)) return value.map((v) => deepResolve(tree, v, depth));
+  if (typeof value === "object" && value !== null) {
+    return Object.fromEntries(
+      Object.entries(value).map(([k, v]) => [k, deepResolve(tree, v, depth)]),
+    );
+  }
+  return value;
 }
 
 /** Inherited $type: nearest ancestor group's $type wins if the token has none. */
@@ -155,6 +169,12 @@ export function buildCss(tree: Tree): {
       case "duration":
         root[`--duration-${name}`] = String(resolved);
         break;
+      case "orba-gradient": {
+        const g = resolved as { angle: number; stops: string[] };
+        root[`--gradient-${path[path.length - 1]}`] =
+          `linear-gradient(${g.angle}deg, ${g.stops.join(", ")})`;
+        break;
+      }
       case "dimension": {
         const value = String(resolved);
         if (topGroup === "radius") theme[`--radius-${name}`] = value;

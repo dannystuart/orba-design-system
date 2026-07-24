@@ -38,6 +38,25 @@ export const alphaSet = Object.entries(colourTokens.colour.alpha)
   .filter(([k]) => !k.startsWith("$"))
   .map(([name, node]) => ({ name, hex: (node as { $value: string }).$value }));
 
+export const gradients = Object.entries(colourTokens.colour.gradient)
+  .filter(([k]) => !k.startsWith("$"))
+  .map(([name, node]) => {
+    const n = node as {
+      $value: { angle: number; stops: string[] };
+      $description?: string;
+    };
+    const stops = n.$value.stops.map((s) =>
+      s.startsWith("{") ? resolveColour(s.slice(1, -1)) : s,
+    );
+    return {
+      name,
+      angle: n.$value.angle,
+      stops,
+      css: `linear-gradient(${n.$value.angle}deg, ${stops.join(", ")})`,
+      note: n.$description,
+    };
+  });
+
 export type SemanticEntry = {
   role: string;
   cssVar: string;

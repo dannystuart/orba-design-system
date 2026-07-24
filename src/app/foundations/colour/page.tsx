@@ -5,6 +5,7 @@ import {
   alphaSet,
   contrast,
   coralRamp,
+  gradients,
   nightRamp,
   resolveColour,
   semanticColours,
@@ -123,6 +124,47 @@ export default function ColourPage() {
           </div>
         </Specimen>
       </div>
+
+      {/* Gradients */}
+      <Specimen
+        label="Gradients"
+        caption="The two brand sweeps from the palette sheet, plus the media scrim. Use sparingly — a gradient is a moment, not a default."
+      >
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {gradients.map((g) => (
+            <figure key={g.name} className="flex flex-col gap-4">
+              <div className="relative h-28 overflow-hidden rounded-lg border border-border-subtle">
+                <div className="absolute inset-0" style={{ background: g.css }} />
+                {g.name === "scrim" && (
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 -z-10"
+                    style={{
+                      background:
+                        "radial-gradient(circle at 70% 20%, var(--color-night-500), var(--color-night-900))",
+                    }}
+                  />
+                )}
+              </div>
+              <div className="flex items-center gap-3">
+                {g.stops.map((s, i) => (
+                  <span
+                    key={`${s}-${i}`}
+                    className="size-8 rounded-full border border-border-subtle"
+                    style={{ backgroundColor: s }}
+                    title={s}
+                  />
+                ))}
+                <figcaption className="ml-auto text-right">
+                  <p className="overline-label text-fg-secondary">{g.name}</p>
+                  <p className="mt-0.5 font-mono text-[10px] text-fg-muted">{g.angle}deg</p>
+                </figcaption>
+              </div>
+              <p className="text-caption text-fg-muted">{g.note}</p>
+            </figure>
+          ))}
+        </div>
+      </Specimen>
 
       {/* Alphas over glass */}
       <Specimen
