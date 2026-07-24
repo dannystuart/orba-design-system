@@ -1,0 +1,1538 @@
+<html vid="0" style="background-color: rgb(46, 46, 46);"><head vid="1">
+
+```
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;600&amp;display=swap" rel="stylesheet" vid="3">
+<script src="https://unpkg.com/@phosphor-icons/web" vid="4"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/thin/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/light/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/duotone/style.css">
+<style vid="5">
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #05070A;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 0;
+    }
+    .space-heading {
+        font-family: 'Space Grotesk', sans-serif;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    .card-glass {
+        background: linear-gradient(145deg, rgba(20, 24, 33, 0.8), rgba(10, 12, 18, 0.9));
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+    }
+    .accent-glow {
+        box-shadow: 0 0 20px rgba(251, 146, 146, 0.2);
+    }
+    .timer-ring {
+        background: conic-gradient(from 0deg, #F87171 0%, #F87171 70%, transparent 70%);
+    }
+    .wave-bar {
+        width: 3px;
+        background: linear-gradient(to top, rgba(248, 113, 113, 0.2), rgba(248, 113, 113, 0.8));
+        border-radius: 4px;
+    }
+    .cosmic-bg-1 {
+        background: radial-gradient(circle at top right, rgba(248, 113, 113, 0.15), transparent 60%);
+    }
+    .cosmic-bg-2 {
+        background: radial-gradient(circle at bottom left, rgba(147, 197, 253, 0.05), transparent 60%);
+    }
+</style>
+```
+
+<style type="text/css">
+*, ::before, ::after {
+--tw-border-spacing-x: 0;
+--tw-border-spacing-y: 0;
+--tw-translate-x: 0;
+--tw-translate-y: 0;
+--tw-rotate: 0;
+--tw-skew-x: 0;
+--tw-skew-y: 0;
+--tw-scale-x: 1;
+--tw-scale-y: 1;
+--tw-pan-x:  ;
+--tw-pan-y:  ;
+--tw-pinch-zoom:  ;
+--tw-scroll-snap-strictness: proximity;
+--tw-gradient-from-position:  ;
+--tw-gradient-via-position:  ;
+--tw-gradient-to-position:  ;
+--tw-ordinal:  ;
+--tw-slashed-zero:  ;
+--tw-numeric-figure:  ;
+--tw-numeric-spacing:  ;
+--tw-numeric-fraction:  ;
+--tw-ring-inset:  ;
+--tw-ring-offset-width: 0px;
+--tw-ring-offset-color: #fff;
+--tw-ring-color: rgb(59 130 246 / 0.5);
+--tw-ring-offset-shadow: 0 0 #0000;
+--tw-ring-shadow: 0 0 #0000;
+--tw-shadow: 0 0 #0000;
+--tw-shadow-colored: 0 0 #0000;
+--tw-blur:  ;
+--tw-brightness:  ;
+--tw-contrast:  ;
+--tw-grayscale:  ;
+--tw-hue-rotate:  ;
+--tw-invert:  ;
+--tw-saturate:  ;
+--tw-sepia:  ;
+--tw-drop-shadow:  ;
+--tw-backdrop-blur:  ;
+--tw-backdrop-brightness:  ;
+--tw-backdrop-contrast:  ;
+--tw-backdrop-grayscale:  ;
+--tw-backdrop-hue-rotate:  ;
+--tw-backdrop-invert:  ;
+--tw-backdrop-opacity:  ;
+--tw-backdrop-saturate:  ;
+--tw-backdrop-sepia:  ;
+--tw-contain-size:  ;
+--tw-contain-layout:  ;
+--tw-contain-paint:  ;
+--tw-contain-style:  ;
+}
+
+::backdrop {
+--tw-border-spacing-x: 0;
+--tw-border-spacing-y: 0;
+--tw-translate-x: 0;
+--tw-translate-y: 0;
+--tw-rotate: 0;
+--tw-skew-x: 0;
+--tw-skew-y: 0;
+--tw-scale-x: 1;
+--tw-scale-y: 1;
+--tw-pan-x:  ;
+--tw-pan-y:  ;
+--tw-pinch-zoom:  ;
+--tw-scroll-snap-strictness: proximity;
+--tw-gradient-from-position:  ;
+--tw-gradient-via-position:  ;
+--tw-gradient-to-position:  ;
+--tw-ordinal:  ;
+--tw-slashed-zero:  ;
+--tw-numeric-figure:  ;
+--tw-numeric-spacing:  ;
+--tw-numeric-fraction:  ;
+--tw-ring-inset:  ;
+--tw-ring-offset-width: 0px;
+--tw-ring-offset-color: #fff;
+--tw-ring-color: rgb(59 130 246 / 0.5);
+--tw-ring-offset-shadow: 0 0 #0000;
+--tw-ring-shadow: 0 0 #0000;
+--tw-shadow: 0 0 #0000;
+--tw-shadow-colored: 0 0 #0000;
+--tw-blur:  ;
+--tw-brightness:  ;
+--tw-contrast:  ;
+--tw-grayscale:  ;
+--tw-hue-rotate:  ;
+--tw-invert:  ;
+--tw-saturate:  ;
+--tw-sepia:  ;
+--tw-drop-shadow:  ;
+--tw-backdrop-blur:  ;
+--tw-backdrop-brightness:  ;
+--tw-backdrop-contrast:  ;
+--tw-backdrop-grayscale:  ;
+--tw-backdrop-hue-rotate:  ;
+--tw-backdrop-invert:  ;
+--tw-backdrop-opacity:  ;
+--tw-backdrop-saturate:  ;
+--tw-backdrop-sepia:  ;
+--tw-contain-size:  ;
+--tw-contain-layout:  ;
+--tw-contain-paint:  ;
+--tw-contain-style:  ;
+}/*
+! tailwindcss v3.4.17 | MIT License | [https://tailwindcss.com](https://tailwindcss.com)
+*//*
+1. Prevent padding and border from affecting element width. ([https://github.com/mozdevs/cssremedy/issues/4](https://github.com/mozdevs/cssremedy/issues/4))
+2. Allow adding a border to an element by just adding a border-width. ([https://github.com/tailwindcss/tailwindcss/pull/116](https://github.com/tailwindcss/tailwindcss/pull/116))
+   */
+
+*,
+::before,
+::after {
+box-sizing: border-box; /* 1 */
+border-width: 0; /* 2 */
+border-style: solid; /* 2 */
+border-color: #e5e7eb; /* 2 */
+}
+
+::before,
+::after {
+--tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+   */
+
+html,
+:host {
+line-height: 1.5; /* 1 */
+-webkit-text-size-adjust: 100%; /* 2 */
+-moz-tab-size: 4; /* 3 */
+tab-size: 4; /* 3 */
+font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+font-feature-settings: normal; /* 5 */
+font-variation-settings: normal; /* 6 */
+-webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+   */
+
+body {
+margin: 0; /* 1 */
+line-height: inherit; /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. ([https://bugzilla.mozilla.org/show_bug.cgi?id=190655](https://bugzilla.mozilla.org/show_bug.cgi?id=190655))
+3. Ensure horizontal rules are visible by default.
+   */
+
+hr {
+height: 0; /* 1 */
+color: inherit; /* 2 */
+border-top-width: 1px; /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-size: inherit;
+font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+color: inherit;
+text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+   */
+
+code,
+kbd,
+samp,
+pre {
+font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+font-feature-settings: normal; /* 2 */
+font-variation-settings: normal; /* 3 */
+font-size: 1em; /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;
+}
+
+sub {
+bottom: -0.25em;
+}
+
+sup {
+top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. ([https://bugs.chromium.org/p/chromium/issues/detail?id=999088](https://bugs.chromium.org/p/chromium/issues/detail?id=999088), [https://bugs.webkit.org/show_bug.cgi?id=201297](https://bugs.webkit.org/show_bug.cgi?id=201297))
+2. Correct table border color inheritance in all Chrome and Safari. ([https://bugs.chromium.org/p/chromium/issues/detail?id=935729](https://bugs.chromium.org/p/chromium/issues/detail?id=935729), [https://bugs.webkit.org/show_bug.cgi?id=195016](https://bugs.webkit.org/show_bug.cgi?id=195016))
+3. Remove gaps between table borders by default.
+   */
+
+table {
+text-indent: 0; /* 1 */
+border-color: inherit; /* 2 */
+border-collapse: collapse; /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+   */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+font-family: inherit; /* 1 */
+font-feature-settings: inherit; /* 1 */
+font-variation-settings: inherit; /* 1 */
+font-size: 100%; /* 1 */
+font-weight: inherit; /* 1 */
+line-height: inherit; /* 1 */
+letter-spacing: inherit; /* 1 */
+color: inherit; /* 1 */
+margin: 0; /* 2 */
+padding: 0; /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+   */
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+-webkit-appearance: button; /* 1 */
+background-color: transparent; /* 2 */
+background-image: none; /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. ([https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737](https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737))
+*/
+
+:-moz-ui-invalid {
+box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+   */
+
+[type='search'] {
+-webkit-appearance: textfield; /* 1 */
+outline-offset: -2px; /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+-webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+   */
+
+::-webkit-file-upload-button {
+-webkit-appearance: button; /* 1 */
+font: inherit; /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+margin: 0;
+}
+
+fieldset {
+margin: 0;
+padding: 0;
+}
+
+legend {
+padding: 0;
+}
+
+ol,
+ul,
+menu {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+dialog {
+padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. ([https://github.com/tailwindlabs/tailwindcss/issues/3300](https://github.com/tailwindlabs/tailwindcss/issues/3300))
+2. Set the default placeholder color to the user's configured gray 400 color.
+   */
+
+input::placeholder,
+textarea::placeholder {
+opacity: 1; /* 1 */
+color: #9ca3af; /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+:disabled {
+cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. ([https://github.com/mozdevs/cssremedy/issues/14](https://github.com/mozdevs/cssremedy/issues/14))
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. ([https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210](https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210))
+   This can trigger a poorly considered lint error in some tools but is included by design.
+   */
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+display: block; /* 1 */
+vertical-align: middle; /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. ([https://github.com/mozdevs/cssremedy/issues/14](https://github.com/mozdevs/cssremedy/issues/14))
+*/
+
+img,
+video {
+max-width: 100%;
+height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden]:where(:not([hidden="until-found"])) {
+display: none;
+}
+.absolute {
+position: absolute;
+}
+.relative {
+position: relative;
+}
+.inset-0 {
+inset: 0px;
+}
+.bottom-0 {
+bottom: 0px;
+}
+.left-0 {
+left: 0px;
+}
+.left-2/3 {
+left: 66.666667%;
+}
+.right-[48px] {
+right: 48px;
+}
+.top-0 {
+top: 0px;
+}
+.top-1/2 {
+top: 50%;
+}
+.top-[12px] {
+top: 12px;
+}
+.z-10 {
+z-index: 10;
+}
+.mx-auto {
+margin-left: auto;
+margin-right: auto;
+}
+.my-10 {
+margin-top: 2.5rem;
+margin-bottom: 2.5rem;
+}
+.my-8 {
+margin-top: 2rem;
+margin-bottom: 2rem;
+}
+.mb-2 {
+margin-bottom: 0.5rem;
+}
+.mb-20 {
+margin-bottom: 5rem;
+}
+.mb-4 {
+margin-bottom: 1rem;
+}
+.mb-8 {
+margin-bottom: 2rem;
+}
+.mt-12 {
+margin-top: 3rem;
+}
+.mt-2 {
+margin-top: 0.5rem;
+}
+.mt-20 {
+margin-top: 5rem;
+}
+.mt-3 {
+margin-top: 0.75rem;
+}
+.mt-4 {
+margin-top: 1rem;
+}
+.mt-8 {
+margin-top: 2rem;
+}
+.block {
+display: block;
+}
+.flex {
+display: flex;
+}
+.grid {
+display: grid;
+}
+.h-1 {
+height: 0.25rem;
+}
+.h-1.5 {
+height: 0.375rem;
+}
+.h-1/2 {
+height: 50%;
+}
+.h-1/3 {
+height: 33.333333%;
+}
+.h-1/4 {
+height: 25%;
+}
+.h-1/5 {
+height: 20%;
+}
+.h-10 {
+height: 2.5rem;
+}
+.h-12 {
+height: 3rem;
+}
+.h-2/3 {
+height: 66.666667%;
+}
+.h-24 {
+height: 6rem;
+}
+.h-3/4 {
+height: 75%;
+}
+.h-3/5 {
+height: 60%;
+}
+.h-4/5 {
+height: 80%;
+}
+.h-5 {
+height: 1.25rem;
+}
+.h-5/6 {
+height: 83.333333%;
+}
+.h-64 {
+height: 16rem;
+}
+.h-8 {
+height: 2rem;
+}
+.h-[20%] {
+height: 20%;
+}
+.h-[30%] {
+height: 30%;
+}
+.h-[40%] {
+height: 40%;
+}
+.h-[45%] {
+height: 45%;
+}
+.h-[55%] {
+height: 55%;
+}
+.h-[60%] {
+height: 60%;
+}
+.h-[85%] {
+height: 85%;
+}
+.h-full {
+height: 100%;
+}
+.min-h-[520px] {
+min-height: 520px;
+}
+.min-h-screen {
+min-height: 100vh;
+}
+.w-0.5 {
+width: 0.125rem;
+}
+.w-1.5 {
+width: 0.375rem;
+}
+.w-10 {
+width: 2.5rem;
+}
+.w-12 {
+width: 3rem;
+}
+.w-2/3 {
+width: 66.666667%;
+}
+.w-5 {
+width: 1.25rem;
+}
+.w-64 {
+width: 16rem;
+}
+.w-8 {
+width: 2rem;
+}
+.w-full {
+width: 100%;
+}
+.max-w-7xl {
+max-width: 80rem;
+}
+.max-w-xl {
+max-width: 36rem;
+}
+.flex-shrink-0 {
+flex-shrink: 0;
+}
+.-translate-x-1/2 {
+--tw-translate-x: -50%;
+transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.-translate-y-1/2 {
+--tw-translate-y: -50%;
+transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-12 {
+--tw-rotate: 12deg;
+transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.transform {
+transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.cursor-grab {
+cursor: grab;
+}
+.grid-cols-1 {
+grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-7 {
+grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.flex-col {
+flex-direction: column;
+}
+.items-start {
+align-items: flex-start;
+}
+.items-end {
+align-items: flex-end;
+}
+.items-center {
+align-items: center;
+}
+.justify-center {
+justify-content: center;
+}
+.justify-between {
+justify-content: space-between;
+}
+.gap-1 {
+gap: 0.25rem;
+}
+.gap-2 {
+gap: 0.5rem;
+}
+.gap-4 {
+gap: 1rem;
+}
+.gap-8 {
+gap: 2rem;
+}
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+--tw-space-y-reverse: 0;
+margin-top: calc(2.5rem*  calc(1 - var(--tw-space-y-reverse)));
+margin-bottom: calc(2.5rem  *var(--tw-space-y-reverse));
+}
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+--tw-space-y-reverse: 0;
+margin-top: calc(1rem*  calc(1 - var(--tw-space-y-reverse)));
+margin-bottom: calc(1rem  *var(--tw-space-y-reverse));
+}
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+--tw-space-y-reverse: 0;
+margin-top: calc(2rem*  calc(1 - var(--tw-space-y-reverse)));
+margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+.overflow-hidden {
+overflow: hidden;
+}
+.overflow-x-hidden {
+overflow-x: hidden;
+}
+.rounded-2xl {
+border-radius: 1rem;
+}
+.rounded-[32px] {
+border-radius: 32px;
+}
+.rounded-full {
+border-radius: 9999px;
+}
+.rounded-md {
+border-radius: 0.375rem;
+}
+.border {
+border-width: 1px;
+}
+.border-r-2 {
+border-right-width: 2px;
+}
+.border-t {
+border-top-width: 1px;
+}
+.border-t-2 {
+border-top-width: 2px;
+}
+.border-gray-800/50 {
+border-color: rgb(31 41 55 / 0.5);
+}
+.border-red-400/40 {
+border-color: rgb(248 113 113 / 0.4);
+}
+.border-white/10 {
+border-color: rgb(255 255 255 / 0.1);
+}
+.border-white/5 {
+border-color: rgb(255 255 255 / 0.05);
+}
+.bg-[#F87171] {
+--tw-bg-opacity: 1;
+background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
+}
+.bg-red-400 {
+--tw-bg-opacity: 1;
+background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
+}
+.bg-red-400/10 {
+background-color: rgb(248 113 113 / 0.1);
+}
+.bg-red-400/30 {
+background-color: rgb(248 113 113 / 0.3);
+}
+.bg-white {
+--tw-bg-opacity: 1;
+background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.bg-white/10 {
+background-color: rgb(255 255 255 / 0.1);
+}
+.bg-white/5 {
+background-color: rgb(255 255 255 / 0.05);
+}
+.bg-white/[0.03] {
+background-color: rgb(255 255 255 / 0.03);
+}
+.bg-[url('https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] {
+background-image: url('[https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&amp;w=2070&amp;auto=format&amp;fit=crop](https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&amp;w=2070&amp;auto=format&amp;fit=crop)');
+}
+.bg-gradient-to-t {
+background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+.from-[#0A0C12] {
+--tw-gradient-from: #0A0C12 var(--tw-gradient-from-position);
+--tw-gradient-to: rgb(10 12 18 / 0) var(--tw-gradient-to-position);
+--tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.via-[#0A0C12]/80 {
+--tw-gradient-to: rgb(10 12 18 / 0)  var(--tw-gradient-to-position);
+--tw-gradient-stops: var(--tw-gradient-from), rgb(10 12 18 / 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+.to-transparent {
+--tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
+.bg-cover {
+background-size: cover;
+}
+.bg-center {
+background-position: center;
+}
+.p-4 {
+padding: 1rem;
+}
+.p-8 {
+padding: 2rem;
+}
+.px-0.5 {
+padding-left: 0.125rem;
+padding-right: 0.125rem;
+}
+.px-6 {
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+}
+.py-20 {
+padding-top: 5rem;
+padding-bottom: 5rem;
+}
+.py-4 {
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+.pt-6 {
+padding-top: 1.5rem;
+}
+.pt-8 {
+padding-top: 2rem;
+}
+.text-left {
+text-align: left;
+}
+.text-center {
+text-align: center;
+}
+.text-3xl {
+font-size: 1.875rem;
+line-height: 2.25rem;
+}
+.text-4xl {
+font-size: 2.25rem;
+line-height: 2.5rem;
+}
+.text-6xl {
+font-size: 3.75rem;
+line-height: 1;
+}
+.text-[10px] {
+font-size: 10px;
+}
+.text-lg {
+font-size: 1.125rem;
+line-height: 1.75rem;
+}
+.text-sm {
+font-size: 0.875rem;
+line-height: 1.25rem;
+}
+.text-xl {
+font-size: 1.25rem;
+line-height: 1.75rem;
+}
+.text-xs {
+font-size: 0.75rem;
+line-height: 1rem;
+}
+.font-light {
+font-weight: 300;
+}
+.font-medium {
+font-weight: 500;
+}
+.font-normal {
+font-weight: 400;
+}
+.font-semibold {
+font-weight: 600;
+}
+.uppercase {
+text-transform: uppercase;
+}
+.leading-relaxed {
+line-height: 1.625;
+}
+.tracking-[0.2em] {
+letter-spacing: 0.2em;
+}
+.tracking-[0.3em] {
+letter-spacing: 0.3em;
+}
+.tracking-tight {
+letter-spacing: -0.025em;
+}
+.tracking-tighter {
+letter-spacing: -0.05em;
+}
+.tracking-wide {
+letter-spacing: 0.025em;
+}
+.tracking-widest {
+letter-spacing: 0.1em;
+}
+.text-black {
+--tw-text-opacity: 1;
+color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+.text-gray-300 {
+--tw-text-opacity: 1;
+color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+.text-gray-400 {
+--tw-text-opacity: 1;
+color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+.text-gray-500 {
+--tw-text-opacity: 1;
+color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+.text-gray-600 {
+--tw-text-opacity: 1;
+color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+.text-red-400 {
+--tw-text-opacity: 1;
+color: rgb(248 113 113 / var(--tw-text-opacity, 1));
+}
+.text-white {
+--tw-text-opacity: 1;
+color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.opacity-40 {
+opacity: 0.4;
+}
+.shadow-[0_0_15px_rgba(255\2c 255\2c 255\2c 0.6)] {
+--tw-shadow: 0 0 15px rgba(255,255,255,0.6);
+--tw-shadow-colored: 0 0 15px var(--tw-shadow-color);
+box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.blur {
+--tw-blur: blur(8px);
+filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.backdrop-filter {
+-webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.transition {
+transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+.transition-all {
+transition-property: all;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+.transition-colors {
+transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+.transition-transform {
+transition-property: transform;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+.duration-300 {
+transition-duration: 300ms;
+}
+.ease-in-out {
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover:scale-105:hover {
+--tw-scale-x: 1.05;
+--tw-scale-y: 1.05;
+transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.hover:bg-[#ef4444]:hover {
+--tw-bg-opacity: 1;
+background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
+.hover:bg-white/5:hover {
+background-color: rgb(255 255 255 / 0.05);
+}
+.hover:text-red-400:hover {
+--tw-text-opacity: 1;
+color: rgb(248 113 113 / var(--tw-text-opacity, 1));
+}
+.active:scale-90:active {
+--tw-scale-x: .9;
+--tw-scale-y: .9;
+transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.active:cursor-grabbing:active {
+cursor: grabbing;
+}
+.group/bar:hover .group-hover/bar:h-[30%] {
+height: 30%;
+}
+.group/bar:hover .group-hover/bar:h-[40%] {
+height: 40%;
+}
+.group/bar:hover .group-hover/bar:h-[50%] {
+height: 50%;
+}
+.group/bar:hover .group-hover/bar:h-[55%] {
+height: 55%;
+}
+.group/bar:hover .group-hover/bar:h-[65%] {
+height: 65%;
+}
+.group/bar:hover .group-hover/bar:h-[70%] {
+height: 70%;
+}
+@media (min-width: 768px) {
+
+.md:mb-0 {
+margin-bottom: 0px;
+}
+
+.md:mt-0 {
+margin-top: 0px;
+}
+
+.md:grid-cols-3 {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.md:flex-row {
+flex-direction: row;
+}
+
+.md:text-5xl {
+font-size: 3rem;
+line-height: 1;
+}
+}* {
+-ms-overflow-style: none !important;
+scrollbar-width: none !important;
+}
+
+```
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+```
+
+</style></head>
+<body class="w-full min-h-screen flex items-center justify-center py-20 px-6 overflow-x-hidden" vid="6">
+
+```
+<div class="max-w-7xl w-full mx-auto" vid="7">
+    
+    <div class="text-center mb-20 space-y-4" vid="8">
+        <h2 class="space-heading text-xs font-semibold text-gray-500" vid="9">Enhanced Deep Focus</h2>
+        <h1 class="text-4xl md:text-5xl font-light tracking-tight" vid="10">Tools for your creative flow.</h1>
+        <p class="text-gray-400 max-w-xl mx-auto font-light leading-relaxed" vid="11">
+            Experience a new dimension of productivity with our cosmic-themed focus suite, designed to eliminate distractions and heighten immersion.
+        </p>
+    </div>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8" vid="12">
+        
+        
+        <div class="card-glass rounded-[32px] p-8 flex flex-col items-center justify-between min-h-[520px] relative overflow-hidden cosmic-bg-1 group" vid="13">
+            <div class="w-full flex justify-between items-center text-xs uppercase tracking-widest text-gray-500 font-medium" vid="14">
+                <span vid="15">Focus Timer</span>
+                <i class="ph ph-clock text-lg" vid="16"></i>
+            </div>
+            
+            <div class="relative flex items-center justify-center my-8" vid="17">
+                
+                <div class="w-64 h-64 rounded-full border border-gray-800/50 flex items-center justify-center" vid="18">
+                    <div class="absolute inset-0 rounded-full border-t-2 border-r-2 border-red-400/40 rotate-12" vid="19"></div>
+                    <div class="text-center z-10" vid="20">
+                        <span class="text-6xl font-light tracking-tighter text-white block" vid="21">25:00</span>
+                        <span class="text-[10px] uppercase tracking-[0.3em] text-gray-500 mt-2 block" vid="22">Deep Work</span>
+                    </div>
+                </div>
+                
+                <div class="absolute top-[12px] right-[48px] w-1.5 h-1.5 bg-red-400 rounded-full accent-glow" vid="23"></div>
+            </div>
+
+            <div class="w-full space-y-8" vid="24">
+                <button class="w-full py-4 bg-[#F87171] hover:bg-[#ef4444] transition-all duration-300 rounded-2xl text-black font-semibold text-sm tracking-wide accent-glow" vid="25">
+                    Start Session
+                </button>
+                
+                <div class="pt-6 border-t border-white/5" vid="26">
+                    <div class="flex justify-between items-center text-xs text-gray-500 mb-4" vid="27">
+                        <span class="uppercase tracking-widest" vid="28">Ambient Context</span>
+                        <span vid="29">On</span>
+                    </div>
+                    <div class="flex items-center gap-4" vid="30">
+                        <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center" vid="31">
+                            <i class="ph ph-play-fill text-red-400" vid="32"></i>
+                        </div>
+                        <div vid="33">
+                            <h4 class="text-sm font-medium" vid="34">Stellar Echoes</h4>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-tighter" vid="35">Brown Noise • 48kHz</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card-glass rounded-[32px] p-8 flex flex-col justify-between min-h-[520px] relative overflow-hidden group" vid="36">
+            
+            <div class="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1464802686167-b939a6910659?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center" vid="37"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0C12] via-[#0A0C12]/80 to-transparent" vid="38"></div>
+            
+            <div class="relative z-10 w-full flex justify-between items-center text-xs uppercase tracking-widest text-gray-400 font-medium" vid="39">
+                <span vid="40">Audio Engine</span>
+                <i class="ph ph-waves text-lg" vid="41"></i>
+            </div>
+
+            <div class="relative z-10 text-left mt-12" vid="42">
+                <h3 class="text-xs uppercase tracking-[0.3em] text-red-400 font-semibold mb-2" vid="43">Current Stream</h3>
+                <h2 class="text-4xl font-light tracking-tight" vid="44">Cosmic Drift</h2>
+                <p class="text-sm text-gray-400 mt-3 font-light leading-relaxed" vid="45">A seamless loop of interstellar radio waves and deep synthetic pads.</p>
+            </div>
+
+            <div class="relative z-10 w-full mt-8" vid="46">
+                
+                <div class="flex items-end justify-between gap-1 h-24 mb-8" vid="47">
+                    <div class="wave-bar h-1/4" vid="48" style="animation: 1.2s ease-in-out 0s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-1/2" vid="49" style="animation: 1.2s ease-in-out 0.05s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-3/4" vid="50" style="animation: 1.2s ease-in-out 0.1s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-2/3" vid="51" style="animation: 1.2s ease-in-out 0.15s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-full" vid="52" style="animation: 1.2s ease-in-out 0.2s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-4/5" vid="53" style="animation: 1.2s ease-in-out 0.25s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-3/5" vid="54" style="animation: 1.2s ease-in-out 0.3s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-1/2" vid="55" style="animation: 1.2s ease-in-out 0.35s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-2/3" vid="56" style="animation: 1.2s ease-in-out 0.4s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-1/3" vid="57" style="animation: 1.2s ease-in-out 0.45s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-1/2" vid="58" style="animation: 1.2s ease-in-out 0.5s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-3/4" vid="59" style="animation: 1.2s ease-in-out 0.55s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-5/6" vid="60" style="animation: 1.2s ease-in-out 0.6s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-3/5" vid="61" style="animation: 1.2s ease-in-out 0.65s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-1/4" vid="62" style="animation: 1.2s ease-in-out 0.7s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-1/3" vid="63" style="animation: 1.2s ease-in-out 0.75s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-1/2" vid="64" style="animation: 1.2s ease-in-out 0.8s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-2/3" vid="65" style="animation: 1.2s ease-in-out 0.85s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-4/5" vid="66" style="animation: 1.2s ease-in-out 0.9s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-full" vid="67" style="animation: 1.2s ease-in-out 0.95s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-3/4" vid="68" style="animation: 1.2s ease-in-out 1s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-1/2" vid="69" style="animation: 1.2s ease-in-out 1.05s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-1/4" vid="70" style="animation: 1.2s ease-in-out 1.1s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                    <div class="wave-bar h-1/5" vid="71" style="animation: 1.2s ease-in-out 1.15s infinite normal none running wave-dance; transform-origin: center bottom;"></div>
+                </div>
+
+                <div class="flex items-center justify-between" vid="72">
+                    <div class="flex gap-4" vid="73">
+                        <button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors" vid="74">
+                            <i class="ph ph-skip-back-light text-white text-xl" vid="75"></i>
+                        </button>
+                        <button class="w-12 h-12 rounded-full bg-white flex items-center justify-center hover:scale-105 transition-transform" vid="76">
+                            <i class="ph ph-play-fill text-black text-xl" vid="77"></i>
+                        </button>
+                        <button class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors" vid="78">
+                            <i class="ph ph-skip-forward-light text-white text-xl" vid="79"></i>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2 text-xs text-gray-500 uppercase tracking-widest" vid="80">
+                        <i class="ph ph-speaker-hifi text-lg" vid="81"></i>
+                        <span vid="82">Hi-Res</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="card-glass rounded-[32px] p-8 flex flex-col justify-between min-h-[520px] relative overflow-hidden cosmic-bg-2 group" vid="83">
+<style vid="84">
+    .card-glass {
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+    .card-glass:hover {
+        transform: translateY(-8px) scale(1.01);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+        border-color: rgba(255, 255, 255, 0.12);
+    }
+    .card-glass .absolute.bg-cover {
+        transition: transform 0.7s ease;
+    }
+    .card-glass:hover .absolute.bg-cover {
+        transform: scale(1.08);
+    }
+    button, a {
+        transition: all 0.3s ease;
+    }
+    [vid="96"] {
+        transition: width 0.1s ease-out;
+    }
+    [vid="97"] {
+        transition: left 0.1s ease-out, transform 0.15s ease;
+    }
+    @keyframes pulse-glow {
+        0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 20px rgba(251, 146, 146, 0.2); }
+        50% { opacity: 0.6; transform: scale(1.6); box-shadow: 0 0 30px rgba(251, 146, 146, 0.4); }
+    }
+    @keyframes slow-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    @keyframes wave-dance {
+        0%, 100% { transform: scaleY(1); }
+        50% { transform: scaleY(0.5); }
+    }
+    @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+    }
+    [vid="23"] {
+        animation: pulse-glow 2.5s ease-in-out infinite;
+    }
+    [vid="19"] {
+        animation: slow-spin 12s linear infinite;
+    }
+    .animate-shimmer {
+        background: linear-gradient(90deg, #F87171 0%, #fca5a5 50%, #F87171 100%) !important;
+        background-size: 200% 100% !important;
+        animation: shimmer 2s linear infinite;
+    }
+</style>
+<style vid="85">
+    .card-glass {
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+    .card-glass:hover {
+        transform: translateY(-8px) scale(1.01);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+        border-color: rgba(255, 255, 255, 0.12);
+    }
+    .card-glass .absolute.bg-cover {
+        transition: transform 0.7s ease;
+    }
+    .card-glass:hover .absolute.bg-cover {
+        transform: scale(1.08);
+    }
+    button, a {
+        transition: all 0.3s ease;
+    }
+    [vid="96"] {
+        transition: width 0.1s ease-out;
+    }
+    [vid="97"] {
+        transition: left 0.1s ease-out, transform 0.15s ease;
+    }
+    @keyframes pulse-glow {
+        0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 20px rgba(251, 146, 146, 0.2); }
+        50% { opacity: 0.6; transform: scale(1.6); box-shadow: 0 0 30px rgba(251, 146, 146, 0.4); }
+    }
+    @keyframes slow-spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+    @keyframes wave-dance {
+        0%, 100% { transform: scaleY(1); }
+        50% { transform: scaleY(0.5); }
+    }
+    @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+    }
+    [vid="23"] {
+        animation: pulse-glow 2.5s ease-in-out infinite;
+    }
+    [vid="19"] {
+        animation: slow-spin 12s linear infinite;
+    }
+    .animate-shimmer {
+        background: linear-gradient(90deg, #F87171 0%, #fca5a5 50%, #F87171 100%) !important;
+        background-size: 200% 100% !important;
+        animation: shimmer 2s linear infinite;
+    }
+</style>
+            <div class="w-full flex justify-between items-center text-xs uppercase tracking-widest text-gray-500 font-medium" vid="86">
+                <span vid="87">Performance</span>
+                <i class="ph ph-chart-line-up text-lg" vid="88"></i>
+            </div>
+
+            <div class="space-y-10 my-10" vid="89">
+                <div class="space-y-4" vid="90">
+                    <div class="flex justify-between items-end" vid="91">
+                        <div vid="92">
+                            <h4 class="text-sm font-medium text-gray-300" vid="93">Daily Goal</h4>
+                            <p class="text-3xl font-light" vid="94">4 / 6 <span class="text-sm text-gray-500 font-normal" vid="95">hours</span></p>
+                        </div>
+                        <span class="text-red-400 text-xs font-semibold" vid="96">66%</span>
+                    </div>
+                    
+                    <div class="relative h-1 w-full bg-white/5 rounded-full cursor-grab active:cursor-grabbing" vid="97">
+                        <div class="absolute left-0 top-0 h-full w-2/3 bg-red-400 rounded-full accent-glow animate-shimmer" vid="98"></div>
+                        <div class="absolute left-2/3 top-1/2 -translate-y-1/2 -translate-x-1/2 w-5 h-5 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,0.6)] flex items-center justify-center cursor-grab active:cursor-grabbing active:scale-90 transition-all" vid="99">
+                            <div class="w-1.5 h-1.5 bg-red-400 rounded-full" vid="100"></div>
+                        </div>
+                        
+                        <div class="absolute inset-0 flex justify-between items-center px-0.5" vid="101">
+                            <div class="w-0.5 h-1.5 bg-white/10" vid="102"></div>
+                            <div class="w-0.5 h-1.5 bg-white/10" vid="103"></div>
+                            <div class="w-0.5 h-1.5 bg-white/10" vid="104"></div>
+                            <div class="w-0.5 h-1.5 bg-white/10" vid="105"></div>
+                            <div class="w-0.5 h-1.5 bg-white/10" vid="106"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4" vid="107">
+                    <h4 class="text-xs uppercase tracking-widest text-gray-500" vid="108">Activity Pulse</h4>
+                    <div class="grid grid-cols-7 gap-2" vid="109">
+                        
+                        <div class="h-12 bg-white/5 rounded-md relative overflow-hidden group/bar" vid="110">
+                            <div class="absolute bottom-0 w-full h-[30%] bg-red-400/30 group-hover/bar:h-[40%] transition-all duration-300" vid="111"></div>
+                        </div>
+                        <div class="h-12 bg-white/5 rounded-md relative overflow-hidden group/bar" vid="112">
+                            <div class="absolute bottom-0 w-full h-[60%] bg-red-400/30 group-hover/bar:h-[70%] transition-all duration-300" vid="113"></div>
+                        </div>
+                        <div class="h-12 bg-white/5 rounded-md relative overflow-hidden group/bar" vid="114">
+                            <div class="absolute bottom-0 w-full h-[45%] bg-red-400/30 group-hover/bar:h-[55%] transition-all duration-300" vid="115"></div>
+                        </div>
+                        <div class="h-12 bg-white/5 rounded-md relative overflow-hidden group/bar" vid="116">
+                            <div class="absolute bottom-0 w-full h-[85%] bg-red-400 accent-glow transition-all duration-300" vid="117"></div>
+                        </div>
+                        <div class="h-12 bg-white/5 rounded-md relative overflow-hidden group/bar" vid="118">
+                            <div class="absolute bottom-0 w-full h-[20%] bg-red-400/30 group-hover/bar:h-[30%] transition-all duration-300" vid="119"></div>
+                        </div>
+                        <div class="h-12 bg-white/5 rounded-md relative overflow-hidden group/bar" vid="120">
+                            <div class="absolute bottom-0 w-full h-[55%] bg-red-400/30 group-hover/bar:h-[65%] transition-all duration-300" vid="121"></div>
+                        </div>
+                        <div class="h-12 bg-white/5 rounded-md relative overflow-hidden group/bar" vid="122">
+                            <div class="absolute bottom-0 w-full h-[40%] bg-red-400/30 group-hover/bar:h-[50%] transition-all duration-300" vid="123"></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-[10px] text-gray-600 uppercase tracking-tighter" vid="124">
+                        <span vid="125">Mon</span>
+                        <span vid="126">Sun</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/[0.03] border border-white/5 rounded-2xl p-4 flex gap-4 items-start" vid="127">
+                <div class="w-8 h-8 rounded-full bg-red-400/10 flex items-center justify-center flex-shrink-0" vid="128">
+                    <i class="ph ph-info text-red-400" vid="129"></i>
+                </div>
+                <div vid="130">
+                    <p class="text-xs text-gray-300 leading-relaxed font-light" vid="131">
+                        <span class="font-semibold text-white" vid="132">Insight:</span> Thursday is your most productive day. You tend to reach deep flow states between 10 AM and 1 PM.
+                    </p>
+                </div>
+            </div>
+<script vid="133">;(function(){
+    document.addEventListener('DOMContentLoaded', () => {
+        const waveBars = document.querySelectorAll('.wave-bar');
+        waveBars.forEach((bar, i) => {
+            bar.style.animation = 'wave-dance 1.2s ease-in-out infinite';
+            bar.style.animationDelay = (i * 0.05) + 's';
+            bar.style.transformOrigin = 'bottom';
+        });
+
+        const progressContainer = document.querySelector('[vid="95"]');
+        const progressFill = document.querySelector('[vid="96"]');
+        const progressKnob = document.querySelector('[vid="97"]');
+        const percentageLabel = document.querySelector('[vid="94"]');
+        const hoursLabel = document.querySelector('[vid="92"]');
+
+        if (progressContainer && progressFill) {
+            let isDragging = false;
+
+            const updateProgress = (clientX) => {
+                const rect = progressContainer.getBoundingClientRect();
+                let percent = (clientX - rect.left) / rect.width;
+                percent = Math.max(0, Math.min(1, percent));
+                const width = Math.round(percent * 100);
+                progressFill.style.width = width + '%';
+
+                if (progressKnob) {
+                    progressKnob.style.left = width + '%';
+                }
+
+                const hours = Math.round(percent * 6);
+                if (hoursLabel) hoursLabel.innerHTML = hours + ' / 6 <span class="text-sm text-gray-500 font-normal">hours</span>';
+                if (percentageLabel) percentageLabel.textContent = Math.round(percent * 100) + '%';
+            };
+
+            progressContainer.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                updateProgress(e.clientX);
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) updateProgress(e.clientX);
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+
+            progressContainer.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                updateProgress(e.touches[0].clientX);
+            }, {passive: true});
+
+            document.addEventListener('touchmove', (e) => {
+                if (isDragging) updateProgress(e.touches[0].clientX);
+            }, {passive: true});
+
+            document.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+        }
+    });
+```
+
+})();</script>
+</div>
+
+```
+    </div>
+
+    
+    <div class="mt-20 flex flex-col md:flex-row justify-between items-center text-gray-600 text-[10px] uppercase tracking-[0.2em] font-medium border-t border-white/5 pt-8" vid="134">
+        <div class="mb-4 md:mb-0" vid="135">Designed for deep exploration</div>
+        <div class="flex gap-8" vid="136">
+            <a href="#" class="hover:text-red-400 transition-colors" vid="137">Privacy</a>
+            <a href="#" class="hover:text-red-400 transition-colors" vid="138">Terms</a>
+            <a href="#" class="hover:text-red-400 transition-colors" vid="139">Support</a>
+        </div>
+        <div class="mt-4 md:mt-0" vid="140">© 2024 DEEP FOCUS SYSTEM</div>
+    </div>
+</div>
+```
+
+</body></html>
