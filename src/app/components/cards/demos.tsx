@@ -14,6 +14,7 @@ import { useState } from "react";
 import { Button, IconButton } from "@/components/orba/Button";
 import { Card, CardHeader } from "@/components/orba/Card";
 import { Slider } from "@/components/orba/Slider";
+import { WaveEqualizer } from "@/components/orba/WaveEqualizer";
 
 /** CSS-only cosmic backdrop (no external imagery — stays token-driven). */
 function CosmicBackdrop() {
@@ -94,8 +95,6 @@ export function FocusTimerCard() {
   );
 }
 
-const WAVE_HEIGHTS = [25, 50, 75, 66, 100, 80, 60, 50, 66, 33, 50, 75, 83, 60, 25, 33, 50, 66, 80, 100, 75, 50, 25, 20];
-
 export function AudioEngineCard() {
   return (
     <Card size="feature" className="flex min-h-130 flex-col justify-between">
@@ -111,20 +110,7 @@ export function AudioEngineCard() {
       </div>
 
       <div className="relative z-10 mt-8 w-full">
-        <div className="mb-8 flex h-24 items-end justify-between gap-1">
-          {WAVE_HEIGHTS.map((h, i) => (
-            <span
-              key={i}
-              className="animate-wave-dance w-[3px] origin-bottom rounded-full"
-              style={{
-                height: `${h}%`,
-                animationDelay: `${i * 50}ms`,
-                background:
-                  "linear-gradient(to top, color-mix(in srgb, var(--color-accent) 20%, transparent), color-mix(in srgb, var(--color-accent) 80%, transparent))",
-              }}
-            />
-          ))}
-        </div>
+        <WaveEqualizer className="mb-8 h-24" />
         <div className="flex items-center justify-between">
           <div className="flex gap-4">
             <IconButton label="Previous track">
