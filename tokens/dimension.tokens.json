@@ -1,0 +1,48 @@
+{
+  "radius": {
+    "$type": "dimension",
+    "$description": "Corner rounding. Inputs use md, buttons pill (or lg for square-ish), standard cards lg, feature cards 2xl.",
+    "sm": { "$value": "8px" },
+    "md": { "$value": "12px" },
+    "lg": { "$value": "16px" },
+    "xl": { "$value": "24px" },
+    "2xl": { "$value": "32px" },
+    "pill": { "$value": "9999px" }
+  },
+  "spacing": {
+    "$type": "dimension",
+    "$description": "4px base scale. Matches Tailwind's default 0.25rem unit, so utilities map 1:1 (p-4 = 16px).",
+    "1": { "$value": "4px" },
+    "2": { "$value": "8px" },
+    "3": { "$value": "12px" },
+    "4": { "$value": "16px" },
+    "5": { "$value": "20px" },
+    "6": { "$value": "24px" },
+    "8": { "$value": "32px" },
+    "10": { "$value": "40px" },
+    "12": { "$value": "48px" },
+    "16": { "$value": "64px" },
+    "20": { "$value": "80px" },
+    "24": { "$value": "96px" }
+  },
+  "breakpoint": {
+    "$type": "dimension",
+    "$description": "Mobile-first responsive breakpoints.",
+    "sm": { "$value": "640px" },
+    "md": { "$value": "768px" },
+    "lg": { "$value": "1024px" },
+    "xl": { "$value": "1280px" }
+  },
+  "layout": {
+    "$type": "dimension",
+    "container": { "$value": "1280px", "$description": "Max content width (80rem)." },
+    "gutter-mobile": { "$value": "24px" },
+    "gutter-desktop": { "$value": "32px" },
+    "sidebar": { "$value": "260px", "$description": "Docs-site sidebar width on lg+." },
+    "touch-target": { "$value": "44px", "$description": "Minimum interactive size on touch devices." }
+  },
+  "blur": {
+    "$type": "dimension",
+    "glass": { "$value": "12px", "$description": "Backdrop blur of the glass surface recipe." }
+  }
+}
