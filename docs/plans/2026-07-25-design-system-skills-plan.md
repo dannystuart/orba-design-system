@@ -40,21 +40,34 @@ design system comes out at ORBA's level of thoroughness (or better) — while th
 1. **Intake** — refs folder convention (`design-refs/images`, `design-refs/reference-code`);
    read every source; inventory present vs missing artefact types (palette, type specimen,
    components, motion refs, coded examples); ask for missing ones rather than inventing.
-2. **Contradiction audit (the load-bearing step)** — actively hunt disagreements across
+2. **Input-richness ladder** — at intake, classify every ingredient the spec requires as
+   **Explicit** (stated in refs, e.g. labelled hexes → extract verbatim), **Observable**
+   (derivable by inspection — sample colours, measure radii, read type sizes → derive,
+   then confirm with the user), or **Absent** (→ propose 2–3 directions in the
+   reference's spirit, gated on the user's pick; NEVER silently invent). Core rule:
+   **the spec's detail bar never lowers for thin inputs — only the ratio of extracted
+   to proposed-and-approved changes.** Thin refs = longer design conversation, not a
+   thinner system.
+3. **Chunk 0 — reference completion (thin inputs only)** — when refs are basic (a single
+   screenshot, a moodboard), the first gated deliverable is manufacturing the missing
+   ORBA-grade reference artefacts: derived palette sheet, proposed type ramp, component
+   direction board, motion direction options. User approves/redlines these BEFORE any
+   system building; they then serve as the refs for the rest of the flow.
+4. **Contradiction audit (the load-bearing step)** — actively hunt disagreements across
    sources (names, fonts, colour variants, radii); force each into a multiple-choice
    decision with a recommendation; never silently pick. Pattern: *give losing values a
    different job* (ORBA: spare coral → error red) before discarding.
-3. **Design conversation → design doc** — locked-decisions table; aesthetic distilled into
+5. **Design conversation → design doc** — locked-decisions table; aesthetic distilled into
    3–7 named principles; token architecture; component scope; build order. Gate with user.
    Doc goes to `docs/plans/YYYY-MM-DD-<name>-design-system-design.md`.
-4. **Implementation plan → chunked build** — foundations chunk first (tokens → pipeline →
+6. **Implementation plan → chunked build** — foundations chunk first (tokens → pipeline →
    shell → foundation pages), then component groups, motion, audit. Branch per chunk;
    browser-review gate per chunk; gates convert to async screenshot evidence
    (`docs/review/chunk-N/`) + a HANDOFF.md when the user steps away.
-5. **Verification doctrine** — typecheck + lint + build before any commit; headless
+7. **Verification doctrine** — typecheck + lint + build before any commit; headless
    full-page screenshots at 1440 and 390; scripted interaction checks for stateful
    components; self-review against the refs before presenting any gate.
-6. **Wrap** — HANDOFF.md (state, locked decisions, restart prompt), Figma manifest
+8. **Wrap** — HANDOFF.md (state, locked decisions, restart prompt), Figma manifest
    generation, licence audit before anything goes public (fonts: fetch-at-build if the
    licence forbids redistribution).
 - **Rules box:** styling comes only from THIS project's refs (never from past systems);
@@ -126,7 +139,9 @@ Per `superpowers:writing-skills`, RED-GREEN-REFACTOR:
 1. **RED (baseline):** run pressure scenarios with subagents WITHOUT the skill; document
    verbatim where output comes out shallow. Expected baseline failures to look for —
    Skill 1: no contradiction audit, silent value-picking, pages before tokens, no gates,
-   no verification evidence. Skill 2: components with 2–3 states, no contrast maths, no
+   no verification evidence. Run TWO baselines: one with rich refs (ORBA-like sheets) and
+   one with a single screenshot — the thin-input baseline should show silent invention of
+   unstated values instead of derive-and-confirm / propose-and-gate behaviour. Skill 2: components with 2–3 states, no contrast maths, no
    reduced-motion, no do/don'ts. Skill 3: guessed values, no screenshot validation, text
    built without checking fonts, non-idempotent scripts.
 2. **GREEN:** write the skill to counter those specific failures; re-run scenarios WITH
